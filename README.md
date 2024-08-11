@@ -36,10 +36,10 @@
     <img src="images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">NLPolis Against Scams</h3>
 
   <p align="center">
-    project_description
+    Build For Good project repo for NLP scam prevention system
     <br />
     <a href="https://github.com/anngineering/bfg-scam-prevention"><strong>Explore the docs »</strong></a>
     <br />
