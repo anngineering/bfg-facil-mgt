@@ -32,23 +32,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/anngineering/bfg-scam-prevention">
+  <a href="https://github.com/anngineering/bfg-facil-mgt">
     <img src="images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">NLPolis Against Scams</h3>
 
   <p align="center">
-    Build For Good project repo for NLP scam prevention system
+    Build For Good project repo for Automated Facilities Allocation Service
     <br />
-    <a href="https://github.com/anngineering/bfg-scam-prevention"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/anngineering/bfg-facil-mgt"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/anngineering/bfg-scam-prevention">View Demo</a>
+    <a href="https://github.com/anngineering/bfg-facil-mgt">View Demo</a>
     ·
-    <a href="https://github.com/anngineering/bfg-scam-prevention/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/anngineering/bfg-facil-mgt/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/anngineering/bfg-scam-prevention/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/anngineering/bfg-facil-mgt/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -65,7 +65,7 @@
       </ul>
     </li>
     <li><a href="#datasets">Datasets</a></li>
-    <li><a href="#nlp-models">NLP Models</a></li>
+    <li><a href="#algos">Resource Allocation Algorithms</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -90,10 +90,13 @@
 ![Product Name Screen Shot][product-screenshot]
 
 <!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description` -->
-
-_Note: This is a preliminary proposal to enhancing scam prevention in SG. Feel free to propose other methods, suggest changes to the system diagram, or simply bounce ideas with me via Telegram DM. Do also note that certain aspects of the scope may expand/get cut as we go along in this hackathon._     
+    
   
-This project proposes a backend service MVP (for now) to enhance the detection, reporting, and indexing of phishing emails, sms, and urls, relying on NLP models and human reporting. The desired features are explained in greater detail in the `roadmap` section below.
+Recreational sports offer a multitude of benefits that significantly contribute to physical and mental well-being. Engaging in these activities helps individuals stay active, enhancing cardiovascular health, muscle strength, and overall fitness. Beyond the physical benefits, team sports foster a strong sense of belonging and community, creating inclusive environments where race, ethnicity, and socio-economic background become secondary to shared goals and teamwork. Moreover, recreational sports teams often serve as the first "line of defense" in spotting and nurturing new talent, potentially building the next Olympian for Team Singapore.  
+
+However, securing facilities for these teams presents significant challenges. Currently, the process involves direct communication with SportsSG, often requiring a 2-3 month advance notice to check facility availability for individual dates. This manual system is prone to delays and inefficiencies, as decisions are at the discretion of sports officers who may be unavailable due to vacations or other reasons. Consequently, teams may face disruptions if their requests are not processed in time.  
+
+To address these issues, I propose a solution inspired by Team USA Gymnastics' use of a computer program to select their bronze medal-winning team. By applying a similar algorithmic approach, we can optimize facility allocations based on parameters such as resource availability, demand, national versus recreational status, team size, and preferences. The envisioned end-state product is a web app that displays available facilities, allows teams to apply for facilities and indicate their preferences, runs a recommendation algorithm to suggest optimal allocations, and notifies teams of their assigned locations and dates. This system aims to streamline the booking process, ensuring fair and efficient access to facilities for all sports teams.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,31 +108,18 @@ TBD
 
 * Python
 * Docker
-* FastAPI? gRPC? Kafka?
-* Any other ideas?
+* MongoDB/MySQL
 
 ### Datasets
 
 TBD  
 
-- Phishing Email Datasets
-    - https://www.kaggle.com/datasets/subhajournal/phishingemails 
-    - https://www.kaggle.com/datasets/shashwatwork/phishing-dataset-for-machine-learning
-- Phishing SMS Datsets
-    - https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset/data
-    - https://huggingface.co/datasets/ucirvine/sms_spam 
-- Phishing URL Datasets
-    - https://www.kaggle.com/datasets/shashwatwork/web-page-phishing-detection-dataset
-    - https://www.kaggle.com/datasets/taruntiwarihp/phishing-site-urls  
 
-### NLP Models
+### Resource Allocation Algorithms
 
 TBD  
 
-- BERT (Encoder only)
-    - https://huggingface.co/google-bert/bert-base-cased 
-    - https://huggingface.co/google-bert/bert-base-uncased 
-- Feel free to add more
+- 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,7 +145,7 @@ TBD
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/anngineering/bfg-scam-prevention
+   git clone https://github.com/anngineering/bfg-facil-mgt
    ```
 2. Enter build folder
    ```sh
@@ -189,15 +179,11 @@ TBD
 <!-- ROADMAP -->
 ## Roadmap
 
-- Data Processing of ham/spam email, sms, and url datasets
-- Set up ElasticSearch DB
-    - Need index for train/val dataset of ham/spam emails, sms, and urls
-    - Need index for model-generated and human-reported spam emails, sms, and urls
-- Train email, sms, and phishing url classification models to adequate metrics
-    - Selection of model types and fine-tuning methodologies (including appropropriate metrics)
-    - Fine Tuning and hyperparameter tuning
-- POC of on-line inference pipeline (command line arguments from local txt file is fine???)
-- POC of on-line user-reporting service for human-labeled spam email/sms/url samples
+- Establish parameters for resource allocation algorithm
+- Test and select resource allocation algorithms
+- Set up Facilities DB, User DB, Booking DB
+- Create Facility Recommendation Service, Application service, Notification service
+- Front End
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
@@ -225,7 +211,7 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/anngineering/bfg-scam-prevention/graphs/contributors">
+<a href="https://github.com/anngineering/bfg-facil-mgt/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
 </a>
 
@@ -245,7 +231,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Anngineering - [@Anngineer](https://web.telegram.org/) - ann.chiajx@gmail.com
 
-Project Link: [https://github.com/anngineering/bfg-scam-prevention](https://github.com/anngineering/bfg-scam-prevention)
+Project Link: [https://github.com/anngineering/bfg-facil-mgt](https://github.com/anngineering/bfg-facil-mgt)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
