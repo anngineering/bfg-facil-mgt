@@ -36,7 +36,7 @@
     <img src="images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">NLPolis Against Scams</h3>
+<h3 align="center">ShareField</h3>
 
   <p align="center">
     Build For Good project repo for Automated Facilities Allocation Service
