@@ -33,7 +33,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/anngineering/bfg-facil-mgt">
-    <img src="images/logo.jpg" alt="Logo">
+    <img src="images/logo_improved.jpg" alt="Logo">
   </a>
 
 <h3 align="center">ShareField</h3>
